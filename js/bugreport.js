@@ -63,7 +63,7 @@ function updateSyntax() {
         }
     }
     if (steps.length) {
-        report.splice(1, 0, '-r ' + steps.join(' ~ '));
+        report.splice(1, 0, '-r ' + steps.join(' - '));
     }
     if ((report.length - 1) == BugApp.fields) {
         bugtext = '!submit ' + report.join(' ');
@@ -105,7 +105,7 @@ function updateEditSyntax() {
             }
         }
         if (steps.length) {
-            edit_val = steps.join(' ~ ');
+            edit_val = steps.join(' - ');
         }
     } else {
         edit_val = $('#' + edit_type + '-field').val();
